@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.components
+package com.example.mycomposeinsta.core.ui.components
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

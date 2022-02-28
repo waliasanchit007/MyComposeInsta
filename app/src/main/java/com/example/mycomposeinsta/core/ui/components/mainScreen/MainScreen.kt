@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.components.mainScreen
+package com.example.mycomposeinsta.core.ui.components.mainScreen
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -11,26 +11,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberImagePainter
-import com.example.mycomposeinsta.core.components.bottomBarHeight
-import com.example.mycomposeinsta.core.components.icon
+import com.example.mycomposeinsta.core.ui.components.bottomBarHeight
+import com.example.mycomposeinsta.core.ui.components.icon
 import com.example.mycomposeinsta.core.model.currentUser
+import com.example.mycomposeinsta.core.navigation.HomeNavHost
 import com.example.mycomposeinsta.core.navigation.HomeSection
-import com.example.mycomposeinsta.home.ui.components.Home
-import com.example.mycomposeinsta.reels.components.Reels
 
 @ExperimentalFoundationApi
 @Composable
@@ -48,12 +43,9 @@ fun MainScreen() {
             )
         }) { innerPadding ->
         val modifier = Modifier.padding(innerPadding)
-
-
+        HomeNavHost(navController = navController, modifier = modifier)
     }
 }
-
-
 
 @Composable
 private fun BottomBar(

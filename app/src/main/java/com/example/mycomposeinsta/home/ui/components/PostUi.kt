@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.example.mycomposeinsta.R
-import com.example.mycomposeinsta.core.components.*
+import com.example.mycomposeinsta.core.ui.components.*
 import com.example.mycomposeinsta.core.model.Post
 
 
@@ -140,7 +140,7 @@ private fun PostFooterIconSection(
       }
 
       PostIconButton {
-        Icon(ImageBitmap.imageResource(id = R.drawable.ic_filled_favorite), "")
+        Icon(ImageBitmap.imageResource(id = R.drawable.ic_dm), "")
       }
     }
 

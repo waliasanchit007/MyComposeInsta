@@ -11,7 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.mycomposeinsta.core.components.mainScreen.MainScreen
+import com.example.mycomposeinsta.core.ui.components.mainScreen.MainScreen
 import com.example.mycomposeinsta.ui.theme.MyComposeInstaTheme
 
 class MainActivity : ComponentActivity() {

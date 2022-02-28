@@ -20,7 +20,7 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.example.mycomposeinsta.R
-import com.example.mycomposeinsta.core.components.*
+import com.example.mycomposeinsta.core.ui.components.*
 import com.example.mycomposeinsta.core.data.ReelsRepository
 import com.example.mycomposeinsta.core.model.Reel
 

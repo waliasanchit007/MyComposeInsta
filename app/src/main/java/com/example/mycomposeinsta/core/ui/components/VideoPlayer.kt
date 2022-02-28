@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.components
+package com.example.mycomposeinsta.core.ui.components
 
 import android.net.Uri
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT

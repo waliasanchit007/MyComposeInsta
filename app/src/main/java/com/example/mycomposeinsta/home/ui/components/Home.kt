@@ -17,7 +17,7 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import com.example.mycomposeinsta.R
-import com.example.mycomposeinsta.core.components.icon
+import com.example.mycomposeinsta.core.ui.components.icon
 import com.example.mycomposeinsta.core.data.PostsRepository
 import com.example.mycomposeinsta.core.data.StoriesRepository
 import com.example.mycomposeinsta.core.model.Post

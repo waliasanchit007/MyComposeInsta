@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
-import com.example.mycomposeinsta.core.components.diagonalGradientBorder
+import com.example.mycomposeinsta.core.ui.components.diagonalGradientBorder
 
 @Composable
 fun StoryImage(imageUrl: String) {
