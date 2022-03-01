@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mycomposeinsta.R
@@ -29,37 +30,56 @@ import kotlinx.coroutines.launch
 @ExperimentalFoundationApi
 @Composable
 fun Home(
-     viewmodel: HomeViewmodel = hiltViewModel()
+    viewmodel: HomeViewmodel = hiltViewModel()
 ) {
 
     val coroutineScope = rememberCoroutineScope()
+    val postsUiState by viewmodel.postState
 
-    Scaffold(
-        topBar = { Toolbar() }) {
-        val posts by PostsRepository.observePosts()
-        val stories by StoriesRepository.observeStories()
+    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
+        Scaffold(
+            Modifier.fillMaxSize(),
+            topBar = { Toolbar() }) {
+            val posts = postsUiState.posts
+            val stories by StoriesRepository.observeStories()
+            LazyColumn{
+                item {
+                    StoriesSection(stories)
+                    Divider()
+                }
+                itemsIndexed(posts){ _, post ->
+                    Post(post,
+                        onDoubleClick = {
+                            coroutineScope.launch {
+                                PostsRepository.performLike(post.id)
+                            }
+                        },
+                        onLikeToggle = {
+                            coroutineScope.launch {
+                                PostsRepository.toggleLike(post.id)
+                            }
+                        }
+                    )
+                }
 
-        LazyColumn{
-            item {
-                StoriesSection(stories)
-                Divider()
             }
-            itemsIndexed(posts){ _, post ->
-                Post(post,
-                    onDoubleClick = {
-                        coroutineScope.launch {
-                            PostsRepository.performLike(post.id)
-                        }
-                    },
-                    onLikeToggle = {
-                        coroutineScope.launch {
-                            PostsRepository.toggleLike(post.id)
-                        }
-                    }
-                )
-            }
+
+        }
+        if(postsUiState.error.isNotBlank()) {
+            Text(
+                text = postsUiState.error,
+                color = MaterialTheme.colors.error,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp),
+            )
+        }
+        if(postsUiState.isLoading) {
+            CircularProgressIndicator()
         }
     }
+
 }
 
 @Composable

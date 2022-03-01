@@ -1,6 +1,8 @@
 package com.example.mycomposeinsta.home.ui
 
 import android.util.Log
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mycomposeinsta.core.utils.Resource
@@ -12,6 +14,9 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewmodel @Inject constructor(val useCase: GetPostsUseCase): ViewModel() {
+
+    private val _postState = mutableStateOf(PostsUiState())
+    val postState: State<PostsUiState> = _postState
     init {
         getPosts()
     }
@@ -20,14 +25,15 @@ class HomeViewmodel @Inject constructor(val useCase: GetPostsUseCase): ViewModel
         useCase.invoke().onEach{ result ->
             when (result) {
                 is Resource.Success -> {
-                    Log.d("sanchit", "getCoin: on success result= ${result.data}")
+                    val posts = result.data
+                    if(posts!=null)
+                    _postState.value = _postState.value.copy(isLoading = false, posts = posts, error = "")
                 }
                 is Resource.Error -> {
-                    Log.d("sanchit", "getCoin: on error result= ${result.message}")
-
+                    _postState.value = _postState.value.copy(isLoading = false, error = result.message!!)
                 }
                 is Resource.Loading -> {
-                    Log.d("sanchit", "getCoin: on loading")
+                    _postState.value = _postState.value.copy(isLoading = true)
                 }
             }
         }.launchIn(viewModelScope)
