@@ -21,15 +21,15 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberImagePainter
-import com.example.mycomposeinsta.core.ui.components.bottomBarHeight
-import com.example.mycomposeinsta.core.ui.components.icon
 import com.example.mycomposeinsta.core.model.currentUser
 import com.example.mycomposeinsta.core.navigation.HomeNavHost
 import com.example.mycomposeinsta.core.navigation.HomeSection
+import com.example.mycomposeinsta.core.ui.components.bottomBarHeight
+import com.example.mycomposeinsta.core.ui.components.icon
 
 @ExperimentalFoundationApi
 @Composable
-fun MainScreen() {
+fun MainScreen () {
 
     val navController = rememberNavController()
     val navItems = HomeSection.values()
@@ -39,7 +39,9 @@ fun MainScreen() {
             BottomBar(
                 items = navItems,
                 currentSection = HomeSection.fromRoute(navController.currentBackStackEntryAsState().value?.destination?.route),
-                onSectionSelected = { navController.navigate(it.name) },
+                onSectionSelected = {
+                    navController.navigate(it.name)
+                },
             )
         }) { innerPadding ->
         val modifier = Modifier.padding(innerPadding)

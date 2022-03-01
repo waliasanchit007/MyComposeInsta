@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mycomposeinsta.R
 import com.example.mycomposeinsta.core.ui.components.icon
 import com.example.mycomposeinsta.core.data.PostsRepository
@@ -26,7 +27,9 @@ import kotlinx.coroutines.launch
 
 @ExperimentalFoundationApi
 @Composable
-fun Home() {
+fun Home(
+     viewmodel: HomeViewmodel = hiltViewModel()
+) {
 
     val coroutineScope = rememberCoroutineScope()
 
@@ -65,7 +68,8 @@ private fun Toolbar() {
         backgroundColor = MaterialTheme.colors.background
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .padding(horizontal = 10.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -97,7 +101,8 @@ private fun Toolbar() {
 private fun StoriesSection(stories: List<Story>) {
     Column {
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .padding(10.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
