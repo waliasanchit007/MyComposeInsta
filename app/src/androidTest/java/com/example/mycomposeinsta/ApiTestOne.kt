@@ -29,7 +29,7 @@ class ApiTestOne {
     fun getGalleryWorking(){
         runBlocking {
 
-            val response = retrofit.getGallery()
+            val response = retrofit.getGalleryTagResponse()
             Log.d("sanchit", "getGalleryWorking: $response")
         }
     }

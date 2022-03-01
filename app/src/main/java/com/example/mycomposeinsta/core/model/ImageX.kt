@@ -1,18 +1,13 @@
 package com.example.mycomposeinsta.core.model
 
 
-import com.example.mycomposeinsta.home.domain.model.Post
-import com.example.mycomposeinsta.home.domain.model.names
 import com.google.gson.annotations.SerializedName
-import kotlin.random.Random
 
-data class Data(
+data class ImageX(
     @SerializedName("account_id")
-    val accountId: Int?,
+    val accountId: Any?,
     @SerializedName("account_url")
-    val accountUrl: String?,
-    @SerializedName("ad_config")
-    val adConfig: AdConfig?,
+    val accountUrl: Any?,
     @SerializedName("ad_type")
     val adType: Int?,
     @SerializedName("ad_url")
@@ -22,25 +17,19 @@ data class Data(
     @SerializedName("bandwidth")
     val bandwidth: Long?,
     @SerializedName("comment_count")
-    val commentCount: Int?,
-    @SerializedName("cover")
-    val cover: String?,
-    @SerializedName("cover_height")
-    val coverHeight: Int?,
-    @SerializedName("cover_width")
-    val coverWidth: Int?,
+    val commentCount: Any?,
     @SerializedName("datetime")
     val datetime: Long?,
     @SerializedName("description")
     val description: Any?,
     @SerializedName("downs")
-    val downs: Int?,
+    val downs: Any?,
     @SerializedName("edited")
-    val edited: Int?,
+    val edited: String?,
     @SerializedName("favorite")
     val favorite: Boolean?,
     @SerializedName("favorite_count")
-    val favoriteCount: Int?,
+    val favoriteCount: Any?,
     @SerializedName("gifv")
     val gifv: String?,
     @SerializedName("has_sound")
@@ -51,54 +40,40 @@ data class Data(
     val hls: String?,
     @SerializedName("id")
     val id: String?,
-    @SerializedName("images")
-    val images: List<Image>?,
-    @SerializedName("images_count")
-    val imagesCount: Int?,
     @SerializedName("in_gallery")
     val inGallery: Boolean?,
     @SerializedName("in_most_viral")
     val inMostViral: Boolean?,
-    @SerializedName("include_album_ads")
-    val includeAlbumAds: Boolean?,
     @SerializedName("is_ad")
     val isAd: Boolean?,
-    @SerializedName("is_album")
-    val isAlbum: Boolean?,
-    @SerializedName("layout")
-    val layout: String?,
     @SerializedName("link")
     val link: String?,
+    @SerializedName("looping")
+    val looping: Boolean?,
     @SerializedName("mp4")
     val mp4: String?,
     @SerializedName("mp4_size")
     val mp4Size: Int?,
     @SerializedName("nsfw")
-    val nsfw: Boolean?,
+    val nsfw: Any?,
     @SerializedName("points")
-    val points: Int?,
-    @SerializedName("privacy")
-    val privacy: String?,
+    val points: Any?,
     @SerializedName("processing")
-    val processing: Processing?,
+    val processing: ProcessingX?,
     @SerializedName("score")
-    val score: Int?,
+    val score: Any?,
     @SerializedName("section")
-    val section: String?,
+    val section: Any?,
     @SerializedName("size")
     val size: Int?,
     @SerializedName("tags")
-    val tags: List<Tag>?,
+    val tags: List<Any>?,
     @SerializedName("title")
-    val title: String?,
-    @SerializedName("topic")
-    val topic: Any?,
-    @SerializedName("topic_id")
-    val topicId: Any?,
+    val title: Any?,
     @SerializedName("type")
     val type: String?,
     @SerializedName("ups")
-    val ups: Int?,
+    val ups: Any?,
     @SerializedName("views")
     val views: Int?,
     @SerializedName("vote")
@@ -106,19 +81,3 @@ data class Data(
     @SerializedName("width")
     val width: Int?
 )
-
-fun Data.toPost(): Post {
-    val random = Random.nextInt(0,9)
-    return Post(
-        id = id?: "kljk${Random.nextInt()}",
-        image = images?.get(0)?.link,
-        user = User(
-            name = names[random],
-            username = accountUrl?:"",
-            image = "https://randomuser.me/api/portraits/men/${random+1}.jpg"
-        ),
-        likesCount = ups?:2,
-        commentsCount = commentCount?:3,
-        timeStamp = datetime?:System.currentTimeMillis() - (3 * 60000)
-    )
-}

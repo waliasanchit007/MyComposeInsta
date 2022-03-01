@@ -1,18 +1,15 @@
 package com.example.mycomposeinsta.core.model
 
 
-import com.example.mycomposeinsta.home.domain.model.Post
-import com.example.mycomposeinsta.home.domain.model.names
 import com.google.gson.annotations.SerializedName
-import kotlin.random.Random
 
-data class Data(
+data class ItemX(
     @SerializedName("account_id")
     val accountId: Int?,
     @SerializedName("account_url")
     val accountUrl: String?,
     @SerializedName("ad_config")
-    val adConfig: AdConfig?,
+    val adConfig: AdConfigX?,
     @SerializedName("ad_type")
     val adType: Int?,
     @SerializedName("ad_url")
@@ -52,7 +49,7 @@ data class Data(
     @SerializedName("id")
     val id: String?,
     @SerializedName("images")
-    val images: List<Image>?,
+    val images: List<ImageX>?,
     @SerializedName("images_count")
     val imagesCount: Int?,
     @SerializedName("in_gallery")
@@ -69,6 +66,8 @@ data class Data(
     val layout: String?,
     @SerializedName("link")
     val link: String?,
+    @SerializedName("looping")
+    val looping: Boolean?,
     @SerializedName("mp4")
     val mp4: String?,
     @SerializedName("mp4_size")
@@ -80,7 +79,7 @@ data class Data(
     @SerializedName("privacy")
     val privacy: String?,
     @SerializedName("processing")
-    val processing: Processing?,
+    val processing: ProcessingXX?,
     @SerializedName("score")
     val score: Int?,
     @SerializedName("section")
@@ -88,7 +87,7 @@ data class Data(
     @SerializedName("size")
     val size: Int?,
     @SerializedName("tags")
-    val tags: List<Tag>?,
+    val tags: List<TagX>?,
     @SerializedName("title")
     val title: String?,
     @SerializedName("topic")
@@ -106,19 +105,3 @@ data class Data(
     @SerializedName("width")
     val width: Int?
 )
-
-fun Data.toPost(): Post {
-    val random = Random.nextInt(0,9)
-    return Post(
-        id = id?: "kljk${Random.nextInt()}",
-        image = images?.get(0)?.link,
-        user = User(
-            name = names[random],
-            username = accountUrl?:"",
-            image = "https://randomuser.me/api/portraits/men/${random+1}.jpg"
-        ),
-        likesCount = ups?:2,
-        commentsCount = commentCount?:3,
-        timeStamp = datetime?:System.currentTimeMillis() - (3 * 60000)
-    )
-}

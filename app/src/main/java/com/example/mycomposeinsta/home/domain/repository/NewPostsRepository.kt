@@ -6,4 +6,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface NewPostsRepository {
     fun getPosts(): Flow<Resource<List<Post>>>
+    fun getPostsByTag(): Flow<Resource<List<Post>>>
 }
