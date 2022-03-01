@@ -22,3 +22,4 @@ fun GalleryResponseDto.toGallery() : Gallery {
         images = images
     )
 }
+

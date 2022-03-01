@@ -1,10 +1,10 @@
-package com.example.mycomposeinsta.core.data
+package com.example.mycomposeinsta.home.domain.repository
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import com.example.mycomposeinsta.core.model.Post
+import com.example.mycomposeinsta.home.domain.model.Post
 import com.example.mycomposeinsta.core.model.User
-import com.example.mycomposeinsta.core.model.names
+import com.example.mycomposeinsta.home.domain.model.names
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.withContext
@@ -18,7 +18,7 @@ object PostsRepository {
     val _posts = ArrayList<Post>()
     (0..9).forEach { index ->
       val post = Post(
-          id = index + 1,
+          id = "kljk${index}",
           image = "https://source.unsplash.com/random/400x300?$index",
           user = User(
               name = names[index],
@@ -41,16 +41,16 @@ object PostsRepository {
 
   fun observePosts(): MutableState<List<Post>> = posts
 
-  suspend fun toggleLike(postId: Int) {
+  suspend fun toggleLike(postId: String) {
     updateLike(postId, true)
   }
 
-  suspend fun performLike(postId: Int) {
+  suspend fun performLike(postId: String) {
     updateLike(postId, false)
   }
 
   private suspend fun updateLike(
-    postId: Int,
+    postId: String,
     isToggle: Boolean
   ) {
     withContext(Dispatchers.IO) {

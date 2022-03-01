@@ -1,10 +1,10 @@
-package com.example.mycomposeinsta.core.data
+package com.example.mycomposeinsta.home.domain.repository
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import com.example.mycomposeinsta.core.model.Story
+import com.example.mycomposeinsta.home.domain.model.Story
 import com.example.mycomposeinsta.core.model.currentUser
-import com.example.mycomposeinsta.core.model.names
+import com.example.mycomposeinsta.home.domain.model.names
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @OptIn(ExperimentalCoroutinesApi::class)

@@ -1,8 +1,10 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.home.domain.model
+
+import com.example.mycomposeinsta.core.model.User
 
 data class Post(
-    val id: Int,
-    val image: String,
+    val id: String,
+    val image: String?,
     val user: User,
     val isLiked: Boolean = false,
     val likesCount: Int,

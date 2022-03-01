@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.example.mycomposeinsta.R
 import com.example.mycomposeinsta.core.ui.components.*
-import com.example.mycomposeinsta.core.model.Post
+import com.example.mycomposeinsta.home.domain.model.Post
 
 
 @ExperimentalFoundationApi
@@ -111,8 +111,8 @@ private fun PostHeader(post: Post) {
 
 @Composable
 private fun PostFooter(
-  post: Post,
-  onLikeToggle: (Post) -> Unit
+    post: Post,
+    onLikeToggle: (Post) -> Unit
 ) {
   PostFooterIconSection(post, onLikeToggle)
   PostFooterTextSection(post)
@@ -120,8 +120,8 @@ private fun PostFooter(
 
 @Composable
 private fun PostFooterIconSection(
-  post: Post,
-  onLikeToggle: (Post) -> Unit
+    post: Post,
+    onLikeToggle: (Post) -> Unit
 ) {
 
   Row(

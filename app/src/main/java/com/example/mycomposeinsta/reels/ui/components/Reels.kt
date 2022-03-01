@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.reels.components
+package com.example.mycomposeinsta.reels.ui.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.example.mycomposeinsta.R
 import com.example.mycomposeinsta.core.ui.components.*
-import com.example.mycomposeinsta.core.data.ReelsRepository
-import com.example.mycomposeinsta.core.model.Reel
+import com.example.mycomposeinsta.reels.domain.model.Reel
+import com.example.mycomposeinsta.reels.domain.repository.ReelsRepository
 
 @Composable
 fun Reels() {

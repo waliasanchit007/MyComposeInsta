@@ -1,7 +1,10 @@
 package com.example.mycomposeinsta.core.model
 
 
+import com.example.mycomposeinsta.home.domain.model.Post
+import com.example.mycomposeinsta.home.domain.model.names
 import com.google.gson.annotations.SerializedName
+import kotlin.random.Random
 
 data class Data(
     @SerializedName("account_id")
@@ -103,3 +106,19 @@ data class Data(
     @SerializedName("width")
     val width: Int?
 )
+
+fun Data.toPost(): Post {
+    val random = Random.nextInt(0,9)
+    return Post(
+        id = id?: "kljk${Random.nextInt()}",
+        image = images?.get(0)?.link,
+        user = User(
+            name = names[random],
+            username = accountUrl?:"",
+            image = "https://randomuser.me/api/portraits/men/${random+1}.jpg"
+        ),
+        likesCount = ups?:2,
+        commentsCount = commentCount?:3,
+        timeStamp = datetime?:System.currentTimeMillis() - (3 * 60000)
+    )
+}

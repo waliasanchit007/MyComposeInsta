@@ -21,9 +21,9 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mycomposeinsta.R
-import com.example.mycomposeinsta.core.model.Post
+import com.example.mycomposeinsta.home.domain.model.Post
 import com.example.mycomposeinsta.core.model.User
-import com.example.mycomposeinsta.core.model.names
+import com.example.mycomposeinsta.home.domain.model.names
 
 enum class AnimationState {
     START, END
@@ -115,7 +115,7 @@ fun AnimLikeButton(
 private fun LikeButtonPreview() {
     AnimLikeButton(
         post = Post(
-            id = 1,
+            id = "lksdjflkj",
             image = "https://source.unsplash.com/random/400x300",
             user = User(
                 name = names.first(),

@@ -19,10 +19,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mycomposeinsta.R
 import com.example.mycomposeinsta.core.ui.components.icon
-import com.example.mycomposeinsta.core.data.PostsRepository
-import com.example.mycomposeinsta.core.data.StoriesRepository
-import com.example.mycomposeinsta.core.model.Post
-import com.example.mycomposeinsta.core.model.Story
+import com.example.mycomposeinsta.home.domain.repository.PostsRepository
+import com.example.mycomposeinsta.home.domain.repository.StoriesRepository
+import com.example.mycomposeinsta.home.domain.model.Post
+import com.example.mycomposeinsta.home.domain.model.Story
+import com.example.mycomposeinsta.home.ui.HomeViewmodel
 import kotlinx.coroutines.launch
 
 @ExperimentalFoundationApi

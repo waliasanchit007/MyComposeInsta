@@ -4,6 +4,9 @@ import com.example.mycomposeinsta.core.data.remote.GalleryApi
 import com.example.mycomposeinsta.core.data.remote.repository.GalleryRepository
 import com.example.mycomposeinsta.core.data.remote.repository.GalleryRepositoryImpl
 import com.example.mycomposeinsta.core.utils.Constants
+import com.example.mycomposeinsta.home.domain.repository.NewPostsRepository
+import com.example.mycomposeinsta.home.domain.repository.NewPostsRepositoryImplementation
+import com.example.mycomposeinsta.home.domain.usecase.GetPostsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,5 +43,16 @@ object AppModule {
     @Singleton
     fun provideCoinRepository(api: GalleryApi): GalleryRepository {
         return GalleryRepositoryImpl(api)
+    }
+
+    @Provides
+    @Singleton
+    fun providePostsRepository(api: GalleryApi): NewPostsRepository {
+        return NewPostsRepositoryImplementation(api)
+    }
+    @Provides
+    @Singleton
+    fun provideGetPostsUseCase(repository: NewPostsRepository): GetPostsUseCase {
+        return GetPostsUseCase(repository)
     }
 }

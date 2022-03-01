@@ -13,7 +13,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.mycomposeinsta.home.ui.components.Home
-import com.example.mycomposeinsta.reels.components.Reels
+import com.example.mycomposeinsta.reels.ui.components.Reels
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
