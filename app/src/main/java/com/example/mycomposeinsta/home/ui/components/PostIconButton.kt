@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.ui.components
+package com.example.mycomposeinsta.home.ui.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.indication

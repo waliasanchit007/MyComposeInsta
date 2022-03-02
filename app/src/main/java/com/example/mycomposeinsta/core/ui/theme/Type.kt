@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.ui.theme
+package com.example.mycomposeinsta.core.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

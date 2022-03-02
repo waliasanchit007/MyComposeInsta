@@ -13,7 +13,7 @@ class ApiTestOne {
     private val client = OkHttpClient.Builder()
         .addInterceptor{
             val request = it.request().newBuilder()
-                .addHeader("Authorization","Client-ID 56503c999bf1e12")
+                .addHeader("Authorization",BuildConfig.IMGUR_CLIENT_ID)
                 .build()
             it.proceed(request)
         }

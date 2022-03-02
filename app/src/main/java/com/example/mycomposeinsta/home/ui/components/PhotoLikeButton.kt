@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.ui.components
+package com.example.mycomposeinsta.home.ui.components
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDp

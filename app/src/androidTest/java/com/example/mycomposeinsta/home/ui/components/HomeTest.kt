@@ -12,8 +12,7 @@ import com.example.mycomposeinsta.MainActivity
 import com.example.mycomposeinsta.core.navigation.HomeSection
 import com.example.mycomposeinsta.core.ui.components.mainScreen.MainScreen
 import com.example.mycomposeinsta.core.utils.TestTags
-import com.example.mycomposeinsta.ui.theme.MyComposeInstaTheme
-import org.junit.Assert.*
+import com.example.mycomposeinsta.core.ui.theme.MyComposeInstaTheme
 
 import org.junit.Before
 import org.junit.Rule

@@ -1,5 +1,6 @@
 package com.example.mycomposeinsta.core.di
 
+import com.example.mycomposeinsta.BuildConfig
 import com.example.mycomposeinsta.core.data.remote.GalleryApi
 import com.example.mycomposeinsta.core.data.remote.repository.GalleryRepository
 import com.example.mycomposeinsta.core.data.remote.repository.GalleryRepositoryImpl
@@ -27,7 +28,7 @@ object AppModule {
         val client = OkHttpClient.Builder()
             .addInterceptor{
                 val request = it.request().newBuilder()
-                    .addHeader("Authorization", "Client-ID 56503c999bf1e12")
+                    .addHeader("Authorization", BuildConfig.IMGUR_CLIENT_ID)
                     .build()
                 it.proceed(request)
             }
