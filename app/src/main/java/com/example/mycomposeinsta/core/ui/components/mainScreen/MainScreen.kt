@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -26,6 +27,7 @@ import com.example.mycomposeinsta.core.navigation.HomeNavHost
 import com.example.mycomposeinsta.core.navigation.HomeSection
 import com.example.mycomposeinsta.core.ui.components.bottomBarHeight
 import com.example.mycomposeinsta.core.ui.components.icon
+import com.example.mycomposeinsta.core.utils.TestTags
 
 @ExperimentalFoundationApi
 @Composable
@@ -74,7 +76,7 @@ private fun BottomBar(
                     } else {
                         Icon(
                             ImageBitmap.imageResource(id = iconRes),
-                            modifier = Modifier.icon(),
+                            modifier = Modifier.icon().testTag(section.tag),
                             contentDescription = ""
                         )
                     }
@@ -112,6 +114,7 @@ private fun BottomBarProfile(isSelected: Boolean) {
                 .padding(padding)
                 .background(color = Color.LightGray, shape = shape)
                 .clip(shape)
+                .testTag(TestTags.PROFILE_SECTION)
         ) {
             Image(
                 painter = rememberImagePainter(
