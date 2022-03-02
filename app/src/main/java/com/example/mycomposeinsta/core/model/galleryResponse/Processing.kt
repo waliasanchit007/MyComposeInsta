@@ -1,9 +1,9 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.core.model.galleryResponse
 
 
 import com.google.gson.annotations.SerializedName
 
-data class ProcessingX(
+data class Processing(
     @SerializedName("status")
     val status: String?
 )

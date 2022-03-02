@@ -1,9 +1,8 @@
 package com.example.mycomposeinsta.home.domain.repository
 
 import com.example.mycomposeinsta.core.data.remote.GalleryApi
-import com.example.mycomposeinsta.core.model.User
-import com.example.mycomposeinsta.core.model.currentUser
-import com.example.mycomposeinsta.core.model.toPost
+import com.example.mycomposeinsta.core.model.galleryResponse.User
+import com.example.mycomposeinsta.core.model.galleryResponse.toPost
 import com.example.mycomposeinsta.core.utils.Resource
 import com.example.mycomposeinsta.home.domain.model.Post
 import com.example.mycomposeinsta.home.domain.model.names

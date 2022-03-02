@@ -1,15 +1,15 @@
 package com.example.mycomposeinsta.reels.domain.model
 
 import android.net.Uri
-import com.example.mycomposeinsta.core.model.User
+import com.example.mycomposeinsta.core.model.galleryResponse.User
 
 data class Reel(
-  val id: Int,
-  private val video: String,
-  val user: User,
-  val isLiked: Boolean = false,
-  val likesCount: Int,
-  val commentsCount: Int
+    val id: Int,
+    private val video: String,
+    val user: User,
+    val isLiked: Boolean = false,
+    val likesCount: Int,
+    val commentsCount: Int
 ) {
 
   fun getVideoUrl(): Uri {

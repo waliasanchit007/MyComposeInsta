@@ -1,9 +1,9 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.core.model.galleryResponse
 
 
 import com.google.gson.annotations.SerializedName
 
-data class ImageX(
+data class Image(
     @SerializedName("account_id")
     val accountId: Any?,
     @SerializedName("account_url")
@@ -59,7 +59,7 @@ data class ImageX(
     @SerializedName("points")
     val points: Any?,
     @SerializedName("processing")
-    val processing: ProcessingX?,
+    val processing: Processing?,
     @SerializedName("score")
     val score: Any?,
     @SerializedName("section")

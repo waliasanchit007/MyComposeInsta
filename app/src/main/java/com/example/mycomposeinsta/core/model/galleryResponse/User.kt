@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.core.model.galleryResponse
 
 data class User(
   val name: String,

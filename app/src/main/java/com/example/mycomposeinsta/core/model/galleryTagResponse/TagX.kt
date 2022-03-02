@@ -1,9 +1,9 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.core.model.galleryTagResponse
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Tag(
+data class TagX(
     @SerializedName("accent")
     val accent: String?,
     @SerializedName("background_hash")
@@ -13,7 +13,7 @@ data class Tag(
     @SerializedName("description")
     val description: String?,
     @SerializedName("description_annotations")
-    val descriptionAnnotations: DescriptionAnnotations?,
+    val descriptionAnnotations: DescriptionAnnotationsXX?,
     @SerializedName("display_name")
     val displayName: String?,
     @SerializedName("followers")

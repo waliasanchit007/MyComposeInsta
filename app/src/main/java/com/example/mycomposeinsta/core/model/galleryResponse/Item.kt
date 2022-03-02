@@ -1,15 +1,15 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.core.model.galleryResponse
 
 
 import com.google.gson.annotations.SerializedName
 
-data class ItemX(
+data class Item(
     @SerializedName("account_id")
     val accountId: Int?,
     @SerializedName("account_url")
     val accountUrl: String?,
     @SerializedName("ad_config")
-    val adConfig: AdConfigX?,
+    val adConfig: AdConfig?,
     @SerializedName("ad_type")
     val adType: Int?,
     @SerializedName("ad_url")
@@ -49,7 +49,7 @@ data class ItemX(
     @SerializedName("id")
     val id: String?,
     @SerializedName("images")
-    val images: List<ImageX>?,
+    val images: List<Image>?,
     @SerializedName("images_count")
     val imagesCount: Int?,
     @SerializedName("in_gallery")
@@ -79,7 +79,7 @@ data class ItemX(
     @SerializedName("privacy")
     val privacy: String?,
     @SerializedName("processing")
-    val processing: ProcessingXX?,
+    val processing: Processing?,
     @SerializedName("score")
     val score: Int?,
     @SerializedName("section")
@@ -87,7 +87,7 @@ data class ItemX(
     @SerializedName("size")
     val size: Int?,
     @SerializedName("tags")
-    val tags: List<TagX>?,
+    val tags: List<Tag>?,
     @SerializedName("title")
     val title: String?,
     @SerializedName("topic")

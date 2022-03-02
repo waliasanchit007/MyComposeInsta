@@ -1,6 +1,7 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.core.model.galleryResponse
 
 
+import com.example.mycomposeinsta.core.model.galleryTagResponse.DataX
 import com.google.gson.annotations.SerializedName
 
 data class GalleryTagResponseDto(

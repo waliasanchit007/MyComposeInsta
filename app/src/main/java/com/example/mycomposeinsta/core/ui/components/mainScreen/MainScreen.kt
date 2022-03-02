@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberImagePainter
-import com.example.mycomposeinsta.core.model.currentUser
+import com.example.mycomposeinsta.core.model.galleryResponse.currentUser
 import com.example.mycomposeinsta.core.navigation.HomeNavHost
 import com.example.mycomposeinsta.core.navigation.HomeSection
 import com.example.mycomposeinsta.core.ui.components.bottomBarHeight

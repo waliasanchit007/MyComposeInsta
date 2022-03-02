@@ -1,6 +1,6 @@
 package com.example.mycomposeinsta.core.data.remote.repository
 
-import com.example.mycomposeinsta.core.model.Gallery
+import com.example.mycomposeinsta.core.model.galleryResponse.Gallery
 import com.example.mycomposeinsta.core.utils.Resource
 import kotlinx.coroutines.flow.Flow
 

@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.model
+package com.example.mycomposeinsta.core.model.galleryTagResponse
 
 
 import com.google.gson.annotations.SerializedName

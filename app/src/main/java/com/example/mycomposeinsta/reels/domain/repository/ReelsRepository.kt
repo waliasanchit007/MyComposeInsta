@@ -1,7 +1,7 @@
 package com.example.mycomposeinsta.reels.domain.repository
 
 import com.example.mycomposeinsta.reels.domain.model.Reel
-import com.example.mycomposeinsta.core.model.User
+import com.example.mycomposeinsta.core.model.galleryResponse.User
 import com.example.mycomposeinsta.home.domain.model.names
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
