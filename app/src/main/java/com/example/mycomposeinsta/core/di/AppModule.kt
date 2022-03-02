@@ -7,6 +7,7 @@ import com.example.mycomposeinsta.core.utils.Constants
 import com.example.mycomposeinsta.home.domain.repository.NewPostsRepository
 import com.example.mycomposeinsta.home.domain.repository.NewPostsRepositoryImplementation
 import com.example.mycomposeinsta.home.domain.usecase.GetPostsUseCase
+import com.example.mycomposeinsta.home.domain.usecase.UpdateLikeUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -54,5 +55,11 @@ object AppModule {
     @Singleton
     fun provideGetPostsUseCase(repository: NewPostsRepository): GetPostsUseCase {
         return GetPostsUseCase(repository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideUpdateLikesUseCase(): UpdateLikeUseCase {
+        return UpdateLikeUseCase()
     }
 }

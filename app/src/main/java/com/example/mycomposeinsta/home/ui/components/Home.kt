@@ -51,12 +51,12 @@ fun Home(
                     Post(post,
                         onDoubleClick = {
                             coroutineScope.launch {
-                                PostsRepository.performLike(post.id)
+                                viewmodel.performLike(post.id)
                             }
                         },
                         onLikeToggle = {
                             coroutineScope.launch {
-                                PostsRepository.toggleLike(post.id)
+                                viewmodel.toggleLike(post.id)
                             }
                         }
                     )

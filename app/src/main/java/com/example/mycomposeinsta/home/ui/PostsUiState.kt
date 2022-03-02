@@ -4,6 +4,6 @@ import com.example.mycomposeinsta.home.domain.model.Post
 
 data class PostsUiState (
     val isLoading:Boolean = false,
-    val posts:List<Post> = emptyList(),
+    var posts:List<Post> = emptyList(),
     val error:String = ""
 )
