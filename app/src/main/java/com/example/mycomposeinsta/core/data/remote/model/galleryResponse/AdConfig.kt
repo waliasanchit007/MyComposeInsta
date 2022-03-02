@@ -1,9 +1,9 @@
-package com.example.mycomposeinsta.core.model.galleryTagResponse
+package com.example.mycomposeinsta.core.data.remote.model.galleryResponse
 
 
 import com.google.gson.annotations.SerializedName
 
-data class AdConfigX(
+data class AdConfig(
     @SerializedName("highRiskFlags")
     val highRiskFlags: List<Any>?,
     @SerializedName("safeFlags")
@@ -13,5 +13,5 @@ data class AdConfigX(
     @SerializedName("unsafeFlags")
     val unsafeFlags: List<String>?,
     @SerializedName("wallUnsafeFlags")
-    val wallUnsafeFlags: List<Any>?
+    val wallUnsafeFlags: List<String>?
 )

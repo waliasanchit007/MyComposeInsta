@@ -1,9 +1,9 @@
-package com.example.mycomposeinsta.core.model.galleryResponse
+package com.example.mycomposeinsta.core.data.remote.model.galleryTagResponse
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Tag(
+data class DataX(
     @SerializedName("accent")
     val accent: String?,
     @SerializedName("background_hash")
@@ -13,7 +13,7 @@ data class Tag(
     @SerializedName("description")
     val description: String?,
     @SerializedName("description_annotations")
-    val descriptionAnnotations: DescriptionAnnotations?,
+    val descriptionAnnotations: DescriptionAnnotationsX?,
     @SerializedName("display_name")
     val displayName: String?,
     @SerializedName("followers")
@@ -24,6 +24,8 @@ data class Tag(
     val isPromoted: Boolean?,
     @SerializedName("is_whitelisted")
     val isWhitelisted: Boolean?,
+    @SerializedName("items")
+    val items: List<ItemX>?,
     @SerializedName("logo_destination_url")
     val logoDestinationUrl: Any?,
     @SerializedName("logo_hash")

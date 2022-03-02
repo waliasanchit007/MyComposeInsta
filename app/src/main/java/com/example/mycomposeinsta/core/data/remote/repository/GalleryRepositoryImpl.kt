@@ -2,8 +2,8 @@ package com.example.mycomposeinsta.core.data.remote.repository
 
 import android.util.Log
 import com.example.mycomposeinsta.core.data.remote.GalleryApi
-import com.example.mycomposeinsta.core.model.galleryResponse.Gallery
-import com.example.mycomposeinsta.core.model.galleryResponse.toGallery
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.Gallery
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.toGallery
 import com.example.mycomposeinsta.core.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

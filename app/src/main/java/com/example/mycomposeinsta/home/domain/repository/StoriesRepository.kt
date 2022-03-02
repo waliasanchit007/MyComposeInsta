@@ -3,7 +3,7 @@ package com.example.mycomposeinsta.home.domain.repository
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.example.mycomposeinsta.home.domain.model.Story
-import com.example.mycomposeinsta.core.model.galleryResponse.currentUser
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.currentUser
 import com.example.mycomposeinsta.home.domain.model.names
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 

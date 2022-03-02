@@ -1,7 +1,7 @@
 package com.example.mycomposeinsta.core.data.remote
 
-import com.example.mycomposeinsta.core.model.galleryResponse.GalleryResponseDto
-import com.example.mycomposeinsta.core.model.galleryResponse.GalleryTagResponseDto
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.GalleryResponseDto
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.GalleryTagResponseDto
 import retrofit2.http.GET
 
 interface GalleryApi {

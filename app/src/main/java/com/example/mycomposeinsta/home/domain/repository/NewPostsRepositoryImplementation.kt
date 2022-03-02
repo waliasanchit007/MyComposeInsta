@@ -1,8 +1,8 @@
 package com.example.mycomposeinsta.home.domain.repository
 
 import com.example.mycomposeinsta.core.data.remote.GalleryApi
-import com.example.mycomposeinsta.core.model.galleryResponse.User
-import com.example.mycomposeinsta.core.model.galleryResponse.toPost
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.User
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.toPost
 import com.example.mycomposeinsta.core.utils.Resource
 import com.example.mycomposeinsta.home.domain.model.Post
 import com.example.mycomposeinsta.home.domain.model.names
@@ -45,7 +45,7 @@ class NewPostsRepositoryImplementation @Inject constructor(private val api: Gall
             }?.map {
                 val random = Random.nextInt(0,9)
                 Post(
-                    it.id?:"slkjf",
+                    it.id?:"slk$random",
                     image = it.images!![0].link,
                     user = User(
                         name = names[random],

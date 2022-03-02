@@ -1,6 +1,6 @@
 package com.example.mycomposeinsta.home.domain.model
 
-import com.example.mycomposeinsta.core.model.galleryResponse.User
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.User
 
 data class Post(
     val id: String,

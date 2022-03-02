@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.model.galleryResponse
+package com.example.mycomposeinsta.core.data.remote.model.galleryResponse
 
 
 import com.google.gson.annotations.SerializedName

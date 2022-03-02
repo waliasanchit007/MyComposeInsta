@@ -1,4 +1,4 @@
-package com.example.mycomposeinsta.core.model.galleryResponse
+package com.example.mycomposeinsta.core.data.remote.model.galleryResponse
 
 
 import com.example.mycomposeinsta.home.domain.model.Post

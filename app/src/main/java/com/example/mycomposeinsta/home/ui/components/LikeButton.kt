@@ -22,7 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mycomposeinsta.R
 import com.example.mycomposeinsta.home.domain.model.Post
-import com.example.mycomposeinsta.core.model.galleryResponse.User
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.User
 import com.example.mycomposeinsta.home.domain.model.names
 
 enum class AnimationState {

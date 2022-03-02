@@ -1,7 +1,7 @@
 package com.example.mycomposeinsta.reels.domain.model
 
 import android.net.Uri
-import com.example.mycomposeinsta.core.model.galleryResponse.User
+import com.example.mycomposeinsta.core.data.remote.model.galleryResponse.User
 
 data class Reel(
     val id: Int,
